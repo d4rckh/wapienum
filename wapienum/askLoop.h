@@ -8,7 +8,10 @@ int askLoop()
     std::string s;
 
     std::cout << "> "; std::cin >> s;
-    std::cout << "answer: " << s << "\n";
+    
+    #if defined _DEBUG
+        std::cout << "answer: " << s << "\n";
+    #endif
 
     parseInput(s);
     askLoop();

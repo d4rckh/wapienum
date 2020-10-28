@@ -8,6 +8,7 @@
 
 int main()
 {
+    std::cout << "windows api enumeration tool command line interface" << "\n";
     askLoop();
     return 0;
 }
