@@ -26,5 +26,8 @@
     <ClInclude Include="askLoop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="functions\get_username.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

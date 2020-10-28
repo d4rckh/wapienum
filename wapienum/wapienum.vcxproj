@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="askLoop.h" />
+    <ClInclude Include="functions\get_username.h" />
     <ClInclude Include="parseInput.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
