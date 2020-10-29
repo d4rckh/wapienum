@@ -3,6 +3,7 @@
 #include <iostream>
 #include "functions/get_username.h"
 #include "functions/net_userenum.h"
+#include "functions/net_wkstagetinfo.h"
 
 int parseInput(std::string s) {
 
@@ -23,7 +24,12 @@ int parseInput(std::string s) {
 
     if (s == "help")
     {
-        std::cout << "help: get_username,net_userenum" << "\n";
+        std::cout << "help: get_username,net_userenum,net_wkstagetinfo" << "\n";
+    }
+
+    if (s == "net_wkstagetinfo")
+    {
+        net_wkstagetinfo();
     }
 
     return 0;
