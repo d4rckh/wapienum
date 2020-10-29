@@ -35,6 +35,6 @@ int net_userenum()
         std::cout << username << ":" << string_sid << "\n";
         NetApiBufferFree(info);
     }
-
+    NetApiBufferFree(buffer);
 	return 0;
 }

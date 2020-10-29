@@ -5,15 +5,18 @@
 
 int askLoop()
 {
-    std::string s;
+    std::string line;
 
-    while (true)
+    std::cout << "Type 'help' for a list of commands you can run.\n";
+
+    std::cout << "> ";
+    while (std::getline(std::cin, line))
     {
-        std::cout << "> "; std::cin >> s;
         #if defined _DEBUG
-                std::cout << "answer: " << s << "\n";
+                    std::cout << "answer: " << s << "\n";
         #endif
-        parseInput(s);
+        parseInput(line);
+        std::cout << "> ";
     }
 
     return 0;

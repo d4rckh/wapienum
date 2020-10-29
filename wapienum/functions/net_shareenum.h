@@ -16,6 +16,9 @@ int net_shareenum ()
     DWORD entries;
     DWORD total_entries;
     DWORD resume_handle = 0;
+    //wchar_t wtext[20];
+    //mbstowcs_s(wtext, (*SERVER_NAME).c_str(), (*SERVER_NAME).length());//includes null
+    //LPWSTR ptr = wtext;
 
     NetShareEnum(NULL,
         1,
@@ -58,6 +61,7 @@ int net_shareenum ()
 
         std::cout << netname << " (" << type << ") " << buffer[i].shi1_type << "\n";
     }
+    NetApiBufferFree(buffer);
 
     return 0;
 }

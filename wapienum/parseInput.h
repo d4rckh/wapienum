@@ -1,10 +1,18 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <sstream>
 #include "functions/get_username.h"
 #include "functions/net_userenum.h"
 #include "functions/net_wkstagetinfo.h"
 #include "functions/net_shareenum.h"
+
+std::string GetNthWord(std::string s, std::size_t n)
+{
+    std::istringstream iss(s);
+    while (n-- > 0 && (iss >> s));
+    return s;
+}
 
 int parseInput(std::string s) {
 
@@ -22,12 +30,7 @@ int parseInput(std::string s) {
     {
         net_userenum();
     }
-
-    if (s == "help")
-    {
-        std::cout << "help: get_username,net_userenum,net_wkstagetinfo,net_shareenum" << "\n";
-    }
-
+    
     if (s == "net_wkstagetinfo")
     {
         net_wkstagetinfo();
@@ -37,6 +40,17 @@ int parseInput(std::string s) {
     {
         net_shareenum();
     }
+
+    if (s == "exit")
+    {
+        exit(0);
+    }
+
+    if (s == "help")
+    {
+        std::cout << "help: get_username,net_userenum,net_wkstagetinfo,net_shareenum,exit" << "\n";
+    }
+
 
     return 0;
 }
