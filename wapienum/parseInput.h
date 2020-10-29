@@ -4,6 +4,7 @@
 #include "functions/get_username.h"
 #include "functions/net_userenum.h"
 #include "functions/net_wkstagetinfo.h"
+#include "functions/net_shareenum.h"
 
 int parseInput(std::string s) {
 
@@ -24,12 +25,17 @@ int parseInput(std::string s) {
 
     if (s == "help")
     {
-        std::cout << "help: get_username,net_userenum,net_wkstagetinfo" << "\n";
+        std::cout << "help: get_username,net_userenum,net_wkstagetinfo,net_shareenum" << "\n";
     }
 
     if (s == "net_wkstagetinfo")
     {
         net_wkstagetinfo();
+    }
+
+    if (s == "net_shareenum")
+    {
+        net_shareenum();
     }
 
     return 0;

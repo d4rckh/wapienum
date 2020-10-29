@@ -32,5 +32,11 @@
     <ClInclude Include="functions\net_userenum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="functions\net_wkstahetinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="functions\net_shareenum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

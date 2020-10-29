@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="askLoop.h" />
     <ClInclude Include="functions\get_username.h" />
+    <ClInclude Include="functions\net_shareenum.h" />
     <ClInclude Include="functions\net_userenum.h" />
     <ClInclude Include="functions\net_wkstahetinfo.h" />
     <ClInclude Include="parseInput.h" />
